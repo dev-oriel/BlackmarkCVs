@@ -22,7 +22,7 @@ const Navbar = () => {
   const handleLinkClick = () => setIsMenuOpen(false);
 
   return (
-    <div className="bg-gray-900 text-gray-200 shadow-md fixed top-0 w-full z-50">
+    <div className="bg-gray-900 text-gray-200 shadow-md fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <div className="flex items-center">
@@ -88,8 +88,8 @@ const Navbar = () => {
 
         {/* Call-to-Action Button */}
         <div className="hidden md:block">
-          <button className="bg-secondary text-white px-4 py-2 rounded-md shadow hover:bg-blue-600 transition duration-300">
-            Get Started
+          <button className="bg-secondary text-white px-4 py-2 rounded-md shadow hover:bg-pink-600 transition duration-300">
+            Order a CV
           </button>
         </div>
       </div>

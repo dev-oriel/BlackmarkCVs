@@ -31,11 +31,13 @@ const App = () => {
       </div>
 
       {/* Application Content */}
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-0">
         <header>
           <Navbar />
         </header>
-        <main>
+        <main className="px-4 mt-20">
+          {" "}
+          {/* Added padding here */}
           <Home />
         </main>
         <Footer />
