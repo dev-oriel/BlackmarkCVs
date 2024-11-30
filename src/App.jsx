@@ -35,7 +35,7 @@ const App = () => {
         <header>
           <Navbar />
         </header>
-        <main className="px-4 mt-20">
+        <main className="px-4 my-20">
           {" "}
           {/* Added padding here */}
           <Home />

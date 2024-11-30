@@ -88,7 +88,7 @@ const Navbar = () => {
 
         {/* Call-to-Action Button */}
         <div className="hidden md:block">
-          <button className="bg-secondary text-white px-4 py-2 rounded-md shadow hover:bg-pink-600 transition duration-300">
+          <button className="bg-secondary text-white px-4 py-2 rounded-md shadow hover:bg-secondaryHover transition duration-300">
             Order a CV
           </button>
         </div>

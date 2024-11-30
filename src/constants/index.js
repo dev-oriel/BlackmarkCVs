@@ -16,3 +16,36 @@ export const slides = [
     label: "Creative Resume",
   },
 ];
+
+export const testimonials = [
+  {
+    name: "John Doe",
+    feedback:
+      "This platform made it super easy to create my CV. Highly recommended!",
+  },
+  {
+    name: "Jane Smith",
+    feedback:
+      "The templates are amazing and the process is very smooth. Great job!",
+  },
+  {
+    name: "Michael Brown",
+    feedback:
+      "I landed my dream job thanks to the professional CV I built here.",
+  },
+  {
+    name: "John Doe",
+    feedback:
+      "This platform made it super easy to create my CV. Highly recommended!",
+  },
+  {
+    name: "Jane Smith",
+    feedback:
+      "The templates are amazing and the process is very smooth. Great job!",
+  },
+  {
+    name: "Michael Brown",
+    feedback:
+      "I landed my dream job thanks to the professional CV I built here.",
+  },
+];
