@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom"; // Import Routes and Route
 import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
+import Portfolio from "./pages/Portfolio";
+import FAQ from "./pages/FAQ";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -36,9 +42,16 @@ const App = () => {
           <Navbar />
         </header>
         <main className="px-4 my-20">
-          {" "}
-          {/* Added padding here */}
-          <Home />
+          {/* Define routes for different pages */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/faq" element={<FAQ />} />
+            {/* Add more routes as needed */}
+          </Routes>
         </main>
         <Footer />
       </div>
@@ -47,7 +60,7 @@ const App = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-cyan-500 text-white p-3 rounded-sm shadow-lg hover:bg-cyan-600 transition duration-300"
+          className="fixed bottom-8 right-8 bg-secondary text-white p-3 rounded-sm shadow-lg backdrop-blur-sm backdrop-opacity-50 backdrop-brightness-125 hover:bg-secondaryHover transition duration-300"
         >
           ⬆
         </button>

@@ -1,10 +1,14 @@
 import { useState, useRef, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "../assets/icons/marionCvs.png";
+import { navLinks } from "../constants";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState(""); // Track the active link
   const menuRef = useRef(null);
+  const location = useLocation();
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -18,8 +22,15 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Close menu on link click
-  const handleLinkClick = () => setIsMenuOpen(false);
+  // Highlight the active link based on route
+  useEffect(() => {
+    const path = location.pathname;
+    setActiveLink(
+      path === "/"
+        ? "Home"
+        : path.slice(1).charAt(0).toUpperCase() + path.slice(2)
+    );
+  }, [location]);
 
   return (
     <div className="bg-gray-900 text-gray-200 shadow-md fixed w-full top-0 z-50">
@@ -47,50 +58,29 @@ const Navbar = () => {
           } md:static md:bg-transparent md:shadow-none md:flex md:items-center`}
         >
           <ul className="flex flex-col md:flex-row md:space-x-6 text-lg font-medium md:items-center">
-            <li
-              className="hover:text-gray-400 cursor-pointer py-2 px-4 md:py-0 md:px-0"
-              onClick={handleLinkClick}
-            >
-              Home
-            </li>
-            <li
-              className="hover:text-gray-400 cursor-pointer py-2 px-4 md:py-0 md:px-0"
-              onClick={handleLinkClick}
-            >
-              About
-            </li>
-            <li
-              className="hover:text-gray-400 cursor-pointer py-2 px-4 md:py-0 md:px-0"
-              onClick={handleLinkClick}
-            >
-              Services
-            </li>
-            <li
-              className="hover:text-gray-400 cursor-pointer py-2 px-4 md:py-0 md:px-0"
-              onClick={handleLinkClick}
-            >
-              Portfolio
-            </li>
-            <li
-              className="hover:text-gray-400 cursor-pointer py-2 px-4 md:py-0 md:px-0"
-              onClick={handleLinkClick}
-            >
-              FAQ
-            </li>
-            <li
-              className="hover:text-gray-400 cursor-pointer py-2 px-4 md:py-0 md:px-0"
-              onClick={handleLinkClick}
-            >
-              Contact
-            </li>
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <Link
+                  to={link.path}
+                  className={`py-2 px-4 md:py-0 md:px-0 hover:text-gray-400 cursor-pointer ${
+                    activeLink === link.name ? "text-secondary font-bold" : ""
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Call-to-Action Button */}
         <div className="hidden md:block">
-          <button className="bg-secondary text-white px-4 py-2 rounded-md shadow hover:bg-secondaryHover transition duration-300">
-            Order a CV
-          </button>
+          <Link to="/order">
+            <button className="bg-secondary text-white px-4 py-2 rounded-md shadow hover:bg-secondaryHover transition duration-300">
+              Order a CV
+            </button>
+          </Link>
         </div>
       </div>
     </div>
