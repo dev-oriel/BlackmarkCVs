@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { slides } from "../../constants";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,21 +11,27 @@ const HeroSection = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, []); // Empty dependency array, effect runs only once on mount
 
   return (
     <div className="flex flex-col md:flex-row items-center md:h-[100vh] justify-between py-12 px-6 sm:px-8 lg:px-16 bg-transparent">
       {/* Text Content */}
       <div className="text-center md:text-left md:w-1/2 space-y-6">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-secondary leading-tight">
-          Build Your CV with Ease
+          Transform Your Career with Professional CVs
         </h1>
         <p className="text-gray-700 text-sm sm:text-base lg:text-lg">
-          Stand out in your job search with professional CV templates designed
-          for success.
+          Tailored, ATS-Optimized Resumes and Cover Letters to Help You Stand
+          Out
         </p>
-        <button className="bg-secondary text-white px-6 py-3 rounded-md shadow hover:bg-secondaryHover transition duration-300">
-          Get Started
+
+        <button>
+          <Link
+            to="/services"
+            className="bg-secondary text-white px-6 py-3 rounded-md shadow hover:bg-secondaryHover transition duration-300"
+          >
+            Get Started
+          </Link>
         </button>
       </div>
 

@@ -2,7 +2,7 @@ import ServicePackage from "../../components/ServicePackage";
 
 const RateCard = () => {
   return (
-    <section className="py-8 md:py-16 bg-secondary text-accent">
+    <section className="py-8 md:py-16 bg-accent text-accent">
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-6 sm:mb-10 text-primary">
         Choose Your Package
       </h2>
