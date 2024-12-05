@@ -64,14 +64,14 @@ export const navLinks = [
 
 export const teamMembers = [
   {
-    name: "Marion Chelangat",
+    name: "Oriel Kiplangat",
     role: "Founder & CEO",
-    image: marion,
+    image: oriel,
   },
   {
     name: "Oriel Kiplangat",
     role: "Head of Design",
-    image: oriel,
+    image: marion,
   },
   {
     name: "Linda Wangui",

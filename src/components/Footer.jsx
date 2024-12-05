@@ -5,13 +5,13 @@ const Footer = () => {
         {/* About Section */}
         <div>
           <h3 className="text-secondary text-lg font-bold mb-4">
-            About Marion CVs
+            About Blackmark CVs
           </h3>
           <p className="leading-relaxed">
-            Marion CVs is dedicated to helping individuals create professional
-            and tailored CVs to achieve their career goals. We provide an
-            intuitive and customizable platform that empowers users to showcase
-            their skills effectively.
+            Blackmark CVs is dedicated to helping individuals create
+            professional and tailored CVs to achieve their career goals. We
+            provide an intuitive and customizable platform that empowers users
+            to showcase their skills effectively.
           </p>
         </div>
 
@@ -59,31 +59,38 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Info */}
+        {/* Updated Contact Info */}
         <div>
           <h3 className="text-secondary text-lg font-bold mb-4">Contact Us</h3>
-          <p>
-            <span className="font-bold">Email:</span>{" "}
-            <a
-              href="mailto:support@marioncvs.com"
-              className="hover:text-secondaryHover transition"
-            >
-              support@marioncvs.com
-            </a>
-          </p>
-          <p>
-            <span className="font-bold">Phone:</span>{" "}
-            <a
-              href="tel:+1234567890"
-              className="hover:text-secondaryHover transition"
-            >
-              +123 456 7890
-            </a>
-          </p>
-          <p className="mt-2">
-            <span className="font-bold">Address:</span> 123 CV Builder Street,
-            Nairobi, Kenya
-          </p>
+          <div className="space-y-4">
+            {/* Email */}
+            <div>
+              <p className="font-bold">Email</p>
+              <a
+                href="mailto:blackmarksolutions@gmail.com"
+                className="hover:text-secondaryHover transition break-all"
+              >
+                blackmarksolutions@gmail.com
+              </a>
+            </div>
+            {/* Phone */}
+            <div>
+              <p className="font-bold">Phone</p>
+              <a
+                href="tel:+254758997669"
+                className="hover:text-secondaryHover transition"
+              >
+                +254 758 997 669
+              </a>
+            </div>
+            {/* Address */}
+            <div>
+              <p className="font-bold">Address</p>
+              <p>
+                123 CV Builder Street, Spring Valley, Westlands, Nairobi - Kenya
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Social Media Links */}
@@ -125,7 +132,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="border-t border-gray-700 mt-10 pt-6 text-center">
         <p className="text-sm">
-          &copy; {new Date().getFullYear()} Marion CVs. All Rights Reserved.
+          &copy; {new Date().getFullYear()} Blackmark CVs. All Rights Reserved.
         </p>
       </div>
     </footer>

@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import logo from "../assets/icons/marionCvs.png";
+import logo from "../assets/icons/Blackmark.png";
 import { navLinks } from "../constants";
 
 const Navbar = () => {
@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <img className="w-14 h-auto" src={logo} alt="Marion CVs Logo" />
           <span className="ml-2 text-xl font-semibold tracking-wide">
-            Marion CVs
+            Blackmark CVs
           </span>
         </div>
 

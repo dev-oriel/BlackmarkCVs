@@ -28,12 +28,12 @@ const Values = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 sm:mb-6 text-secondary">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 sm:mb-6 text-primary">
           Our Core Values
         </h2>
         <p className="text-base sm:text-lg md:text-xl mb-6 leading-relaxed">
-          At <span className="font-semibold">Marion CVs</span>, our core values
-          drive our commitment to delivering exceptional results.
+          At <span className="font-semibold">Blackmark CVs</span>, our core
+          values drive our commitment to delivering exceptional results.
         </p>
 
         {/* Values Grid */}

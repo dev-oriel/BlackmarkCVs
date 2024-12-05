@@ -26,15 +26,15 @@ const Testimonials = () => {
   return (
     <div className="py-8 mb-8 flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 bg-transparent ">
       {/* Heading */}
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-secondary mb-6">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-secondary mb-6">
         What Our Users Say
       </h2>
 
       {/* Testimonial Card */}
       <div className="relative w-full sm:w-4/5 lg:w-3/5 max-w-2xl mt-6 flex flex-col items-center">
-        <div className="bg-gray-800 p-6 sm:p-8 lg:p-10 rounded-lg shadow-lg text-center w-full flex flex-col items-center min-h-[240px] sm:min-h-[280px] lg:min-h-[320px] transition-all duration-500 ease-in-out">
+        <div className="bg-accent p-6 sm:p-8 lg:p-10 rounded-lg shadow-lg text-center w-full flex flex-col items-center min-h-[240px] sm:min-h-[280px] lg:min-h-[320px] transition-all duration-500 ease-in-out">
           {/* Decorative Quote Mark */}
-          <div className="text-secondary text-[40px] sm:text-[50px] lg:text-[60px] font-serif leading-none mb-4">
+          <div className="text-primary text-[40px] sm:text-[50px] lg:text-[60px] font-serif leading-none mb-4">
             &#8220;
           </div>
 
@@ -47,7 +47,7 @@ const Testimonials = () => {
           </p>
 
           {/* Testimonial Name */}
-          <p className="text-secondary font-semibold mt-4 text-base sm:text-lg lg:text-xl">
+          <p className="text-primary font-semibold mt-4 text-base sm:text-lg lg:text-xl">
             ~ {testimonials[currentTestimonial].name} ~
           </p>
         </div>
@@ -56,14 +56,14 @@ const Testimonials = () => {
         <div className="absolute top-1/2 -translate-y-1/2 flex justify-between w-full px-4 sm:px-6 lg:px-8">
           <button
             onClick={handlePrev}
-            className="text-secondary text-2xl sm:text-3xl hover:text-pink-600 transition duration-300 focus:outline-none"
+            className="text-primary text-2xl sm:text-3xl hover:text-white transition duration-300 focus:outline-none"
             aria-label="Previous Testimonial"
           >
             &lt;
           </button>
           <button
             onClick={handleNext}
-            className="text-secondary text-2xl sm:text-3xl hover:text-pink-600 transition duration-300 focus:outline-none"
+            className="text-primary text-2xl sm:text-3xl hover:text-white transition duration-300 focus:outline-none"
             aria-label="Next Testimonial"
           >
             &gt;

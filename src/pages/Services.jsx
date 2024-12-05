@@ -1,10 +1,21 @@
+import RateCard from "../sections/Services/RateCard";
+
 const Services = () => {
   return (
     <div>
-      <h1 className="text-4xl font-bold text-center my-10">Our Services</h1>
-      <p className="text-lg text-center">
-        Explore our wide range of professional CV and resume services.
-      </p>
+      {/* Header */}
+      <header className="bg-gradient-to-r from-coral-500 via-coral-400 to-coral-600 text-secondary py-10 md:py-16 text-center">
+        <h1 className="text-4xl md:text-5xl font-extrabold">
+          Our Professional Services
+        </h1>
+        <p className="text-lg md:text-xl mt-4 max-w-2xl mx-auto text-accent">
+          Elevate your career with tailored CVs, cover letters, and LinkedIn
+          profile optimization services.
+        </p>
+      </header>
+
+      {/* Rate Packages */}
+      <RateCard />
     </div>
   );
 };
